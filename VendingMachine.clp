@@ -8,23 +8,23 @@
 
 (deffunction inputCoins (?total)
         (while (> ?total 0)    
-        (bind ?coin (read))
-        (if(eq ?coin R5) then
-                (bind ?total (- ?total 5.00)))
-        (if(eq ?coin R2) then
-                (bind ?total (- ?total 2.00)))
-        (if(eq ?coin R1) then
-                (bind ?total (- ?total 1.00)))
-        (if(eq ?coin c50) then
-                (bind ?total (- ?total 0.50)))
-        (if(eq ?coin c20) then
-                (bind ?total (- ?total 0.20)))
-        (if(eq ?coin c10) then
-                (bind ?total (- ?total 0.10)))
-        (if(> ?total 0) then
-              (printout t "You need R " ?total "0" crlf
-                          "Input R5, R2, R1, c50, c20, c10" crlf
-                          "Input : " )))
+          (bind ?coin (read))
+          (if(eq ?coin R5) then
+                  (bind ?total (- ?total 5.00)))
+          (if(eq ?coin R2) then
+                  (bind ?total (- ?total 2.00)))
+          (if(eq ?coin R1) then
+                  (bind ?total (- ?total 1.00)))
+          (if(eq ?coin c50) then
+                  (bind ?total (- ?total 0.50)))
+          (if(eq ?coin c20) then
+                  (bind ?total (- ?total 0.20)))
+          (if(eq ?coin c10) then
+                  (bind ?total (- ?total 0.10)))
+          (if(> ?total 0) then
+                (printout t "You need R " ?total "0" crlf
+                            "Input R5, R2, R1, c50, c20, c10" crlf
+                            "Input : " )))
         (change ?total))
 
 (deffunction inputItem ()
